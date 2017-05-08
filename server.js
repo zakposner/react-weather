@@ -29,7 +29,7 @@ app.use((req, res, next) => {
 // load static files from dist folder
 app.use(express.static('dist'));
 
-app.listen(3000, () => {
+app.listen(PORT, () => {
   let now = moment().format('MMM Do YYYY, h:mm:ss a');
   console.log(colors.bgBlue(`server running on port ${PORT} at ${now}`));
 });

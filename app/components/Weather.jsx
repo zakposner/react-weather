@@ -61,17 +61,3 @@ const Weather = React.createClass({
 
 
 module.exports = Weather;
-
-
-// Functions in the component vs functions in the render functions
-
-  // Functions nested within the component (sibling to the render function)
-  // are primarily for:
-    // 1. altering the state of the component
-    // 2. changing the props of subcomponents
-    // 3. passing callbacks down to subcomponents
-
-  // Functions nested within the render function are for conditionally
-  // deciding what to render, based on the state of the component
-    // these functions are then called within jsx expressions
-    // these functions should return JSX
