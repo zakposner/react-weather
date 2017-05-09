@@ -11,7 +11,7 @@ const PORT = process.env.PORT || 3000;
 app.use((req, res, next) => {
   let now = moment().format('MMM Do YYYY, h:mm:ss a');
   let status = res.statusCode === 200 // format status code color by response
-    ? colors.green(res.statusCode);
+    ? colors.green(res.statusCode)
     : colors.red(res.statusCode);
   console.log(`${now} : ${req.method} ${colors.yellow(req.path)} ~ ${status}`);
   next();
