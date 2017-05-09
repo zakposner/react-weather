@@ -25,4 +25,4 @@ module.exports = {
 }
 
 // returning the axios call lets us chain promises, attaching then and catch
-// statements to the result of calling the getTemp function itself
+  // statements to the result of calling the getTemp function itself
