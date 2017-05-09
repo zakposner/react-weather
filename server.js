@@ -19,10 +19,14 @@ app.use((req, res, next) => {
 
 // route https requests to http
 app.use((req, res, next) => {
-  if (req.headers['x-forwarded-proto'] === 'http') {
+  if (PORT !== 3000) { // if not on local env
+    if (req.headers['x-forwarded-proto'] === 'http') { // if http - cool
+      next();
+    } else { // if https - convert it to http
+      res.redirect('http://' + req.hostname + req.url);
+    }
+  } else {
     next();
-  } else { // if https, convers it to http
-    res.redirect(`http://${req.hostname}${req.url}`);
   }
 });
 
