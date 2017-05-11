@@ -25,5 +25,5 @@ module.exports = About;
 
 // NOTE:
   // Anywhere this.props is called can be changed to just props
-  // as props is now an argument passed to thee function, instead of a property
+  // as props is now an argument passed to the function, instead of a property
   // on an object we are trying to access

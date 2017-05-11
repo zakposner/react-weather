@@ -6,7 +6,6 @@ const Nav = require('Nav');
 const Main = (props) => {
   return (
     <div>
-      <h2>Main Component</h2>
       <Nav />
       {props.children}
     </div>
