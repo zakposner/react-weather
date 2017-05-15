@@ -12,16 +12,26 @@ const Nav = React.createClass({
         <div className='top-bar-left'>
           <ul className="menu">
             <li className='menu-text'>React Weather</li>
-            <li><IndexLink to="/" activeClassName="active">Get the Weather</IndexLink></li>
-            <li><Link to="/about" activeClassName="active">About</Link></li>
-            <li><Link to="/examples" activeClassName="active">Examples</Link></li>
+            <li>
+              <IndexLink to="/" activeClassName="active">Forecast</IndexLink>
+            </li>
+            <li>
+              <Link to="/about" activeClassName="active">About</Link>
+            </li>
+            <li>
+              <Link to="/examples" activeClassName="active">Examples</Link>
+            </li>
           </ul>
         </div>
         <div className='top-bar-right'>
           <form onSubmit={this.onSearch}>
             <ul className='menu'>
-              <li><input type='search' placeholder='Enter a location'></input></li>
-              <li><button type='button' className='button' value='Get Weather'>Get the Weather</button></li>
+              <li>
+                <input type='search' placeholder='Enter a location'></input>
+              </li>
+              <li>
+                <button type='button' className='button hollow' value='Get Weather'>Get the Weather</button>
+              </li>
             </ul>
           </form>
         </div>

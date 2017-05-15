@@ -11,7 +11,7 @@ module.exports = {
     jquery: 'jQuery'
   },
   plugins: [
-    new webpack.ProvidePlugin({ // loads jquery whenever $ or jQuery are encountered in a module
+    new webpack.ProvidePlugin({ // loads jquery whenever $ or jQuery are encountered
       '$': 'jquery',
       'jQuery': 'jquery'
     })
@@ -21,9 +21,10 @@ module.exports = {
     filename: 'bundle.js'
   },
   resolve: {
-    alias: { // allows you to require modules directly by alias
+    alias: {
       Main: path.resolve(__dirname, 'app/components/Main.jsx'),
       Nav: path.resolve(__dirname, 'app/components/Nav.jsx'),
+      ErrorModal: path.resolve(__dirname, 'app/components/ErrorModal.jsx'),
       Weather: path.resolve(__dirname, 'app/components/Weather.jsx'),
       About: path.resolve(__dirname, 'app/components/About.jsx'),
       Examples: path.resolve(__dirname, 'app/components/Examples.jsx'),

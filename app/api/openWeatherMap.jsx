@@ -10,14 +10,13 @@ module.exports = {
     return axios.get(reqUrl) // API Call
       .then((res) => {
         if (res.data.cod !== 200) {
-          throw new Error(res.data.message);
+          throw new Error('unable to fetch weather for that location';
         } else {
           return res.data.main.temp;
         }
       })
       .catch((res) => {
-        console.log('Error connecting to the weather API');
-        console.log(res);
+        throw new Error('unable to fetch weather for that location');
       })
   }
 }

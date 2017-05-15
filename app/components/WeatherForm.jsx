@@ -6,7 +6,7 @@ const WeatherForm = React.createClass({
       <div>
         <form onSubmit={this.onFormSubmit}>
           <input type="text" ref="location"></input>
-          <button>Submit</button>
+          <button className='button expanded'>Submit</button>
         </form>
       </div>
     )
